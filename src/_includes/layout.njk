@@ -1,0 +1,98 @@
+---
+title: Questhink
+isHome: true
+---
+<!DOCTYPE html>
+<html lang="en">
+  {%- set computedTitle = 'Question #' + renderData.id | string if renderData and renderData.tags and 'question' in renderData.tags | string else title -%}
+  {%- set computedDescription = renderData.title if renderData and renderData.tags and 'question' in renderData.tags | string else description -%}
+  
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20980483-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-20980483-3');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ computedTitle }}</title>
+    <meta name="description" content="{{ computedDescription }}"/>
+    <meta property="og:title" content="{{ computedTitle }}">
+    <meta property="og:description" content="{{ computedDescription }}">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@questhinkcom"/>
+    <meta name="twitter:title" content="{{ computedTitle }}"/>
+    <meta name="twitter:description" content="{{ computedDescription }}"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ website.assetsPath }}/images/layout/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ website.assetsPath }}/images/layout/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ website.assetsPath }}/images/layout/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ website.assetsPath }}/images/layout/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ website.assetsPath }}/images/layout/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ website.assetsPath }}/images/layout/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ website.assetsPath }}/images/layout/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ website.assetsPath }}/images/layout/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ website.assetsPath }}/images/layout/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ website.assetsPath }}/images/layout/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ website.assetsPath }}/images/layout/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ website.assetsPath }}/images/layout/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ website.assetsPath }}/images/layout/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ website.assetsPath }}/images/layout/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900|Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ website.assetsPath }}/css/site.min.css"/>
+    <script>
+      let numberOfQuestions = {{ questions.length }};
+      let currentQuestionNumber = {{ (renderData and renderData.id) or 0 }};
+      let websiteUrl = "{{ website.url }}"
+    </script>
+    <script src="{{ website.assetsPath }}/js/site.min.js" defer></script>
+    <script data-ad-client="ca-pub-5891909623283796" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  <body>
+  <header>
+    <h1 style="font-family: 'Satisfy', cursive;">
+      <a class="text-2xl text-black font-normal text-gray-500 hover:text-black" href="/">
+            questhink
+          </a>
+    </h1>
+    <div class="relative js-dropdown">
+      <div class="cursor-pointer text-gray-500 hover:text-black">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg class="fill-current w-5" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve">
+          <g>
+            <g>
+              <circle cx="42.667" cy="213.333" r="42.667"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <circle cx="213.333" cy="213.333" r="42.667"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <circle cx="384" cy="213.333" r="42.667"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="absolute right-0 text-sm w-32 shadow-lg rounded-lg bg-white js-menu overflow-hidden">
+            <a class="text-gray-500 hover:text-black block px-4 py-2 pb-1" href="/about">About</a>
+        <a class="text-gray-500 hover:text-black block px-4 py-2 pt-1" href="/contact">Contact</a>
+    </div>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+</body>
+</html>
