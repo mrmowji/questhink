@@ -7,6 +7,6 @@ Questions to think about.
 * Or you can do other common stuff as usual; fixing bugs, correcting typos, etc.
 
 ## History
-Initially this website was developed using ASP.NET Core and TailwindCSS. But I decided to go free and lower the complexity.
+Initially this website was developed using ASP.NET Core and TailwindCSS. But I decided to go free, lower the complexity, and take advantage of GitHub Pages and Static Sites benefits.
 
 Currently it's based on 11ty Static Site Generator. TailwindCSS is dropped; no need, since it's a minimal website. 
