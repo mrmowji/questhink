@@ -18,6 +18,8 @@ tags: page
 <p>
   Or, you can share it with your friends (on Twitter, Instagram, etc.) and build a useful conversation.
 </p>
+<p>It's an open-source website developed using <a href="https://www.11ty.dev/" target="_blank">11ty</a>. You can contribute if you're interested.
+Check <a href="https://github.com/mrmowji/questhink" target="_blank">the GitHub repository</a>.</p>
 <p>
   You can contact me via
   <a href="/contact">the contact page</a>.
