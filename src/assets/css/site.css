@@ -559,7 +559,7 @@ body {
 .menu-dropdown-item {
   color: #a0aec0;
   display: block;
-  padding: 0.5rem 1rem 0.25rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .menu-dropdown-item:hover {
@@ -615,10 +615,10 @@ body {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   body {
     max-width: 48rem;
-    padding: 8rem;
+    padding: 8rem 0;
   }
 
   header {
