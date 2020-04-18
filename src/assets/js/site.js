@@ -35,7 +35,7 @@ function copyToClipboard(text) {
 
 function displayMessage(message) {
   var el = document.createElement("div");
-  el.setAttribute("class", "text-white text-center fixed bottom-0 left-0 right-0 bg-black p-5 text-sm");
+  el.setAttribute("class", "message");
   el.innerText = message;
   document.body.append(el);
   setTimeout(function(){ el.remove() }, (message.length / 20) * 4000);

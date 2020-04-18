@@ -5,7 +5,7 @@ description: Suggest a new question, send your message, or comment. That's be ap
 tags: page
 ---
 
-  <p class="mb-16">
+  <p>
   Currently I use Disqus as a commenting platform. It's widely used.
   It might be blocked in some countries though (including my own; Iran).
   If that's the case,
@@ -14,7 +14,7 @@ tags: page
   <a href="mailto:javan.mojtaba@gmail.com">javan.mojtaba@gmail.com</a>.
 </p>
 
-<div id="disqus_thread"></div>
+<div id="disqus_thread" class="disqus"></div>
 
 <script>
 

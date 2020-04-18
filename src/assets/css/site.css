@@ -159,8 +159,7 @@ select {
  */
 
 button,
-[type="button"],
-[type="submit"] {
+[type="button"] {
   -webkit-appearance: button;
 }
 
@@ -169,8 +168,7 @@ button,
  */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -180,8 +178,7 @@ button::-moz-focus-inner,
  */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type="button"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -257,10 +254,6 @@ summary {
  * Add the correct display in IE 10.
  */
 
-[hidden] {
-  display: none;
-}
-
 /**
  * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
  * A thin layer on top of normalize.css that provides a starting point more
@@ -289,8 +282,6 @@ html {
  */
 
 h1,
-h2,
-h3,
 p {
   margin: 0;
 }
@@ -308,12 +299,6 @@ button {
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 /**
@@ -392,14 +377,11 @@ input::placeholder {
   opacity: 0.5;
 }
 
-button,
-[role="button"] {
+button {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3 {
+h1 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -463,34 +445,6 @@ embed {
  * https://github.com/mozdevs/cssremedy/issues/14
  */
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
 /* add extracted components here */
 
 a {
@@ -517,19 +471,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-  margin-top: 4rem;
-}
-
-h3 {
-  font-size: 1.125rem;
-  font-weight: 900;
-  margin-top: 0.75rem;
-}
-
 input[type="text"] {
   outline: 0;
   background-color: #edf2f7;
@@ -542,23 +483,6 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border-color: #90cdf4;
-}
-
-input[type="submit"] {
-  width: 100%;
-  display: block;
-  background-color: #718096;
-  padding: 0.75rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #4a5568;
-}
-
-label {
-  color: #a0aec0;
 }
 
 p {
@@ -574,258 +498,121 @@ time {
   margin-left: 1.25rem;
 }
 
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-bottom: 0.75rem;
-}
-
 summary {
   outline: 0;
-}
-
-.field {
-  margin-bottom: 1.25rem;
 }
 
 .js-menu {
   display: none;
 }
 
-.bg-black {
-  background-color: #000;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
-.border-white {
-  border-color: #fff;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-b-2 {
-  border-bottom-width: 2px;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .block {
   display: block;
-}
-
-.flex {
-  display: flex;
-}
-
-.hidden {
-  display: none;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.font-normal {
-  font-weight: 400;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.leading-none {
-  line-height: 1;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.mb-32 {
-  margin-bottom: 8rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-32 {
-  padding: 8rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.px-32 {
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
-.static {
-  position: static;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.bottom-0 {
-  bottom: 0;
-}
-
-.left-0 {
-  left: 0;
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.fill-current {
-  fill: currentColor;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-black {
-  color: #000;
-}
-
-.text-white {
-  color: #fff;
-}
-
-.text-gray-500 {
-  color: #a0aec0;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-}
-
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-full {
-  width: 100%;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: -0.5px;
+}
+
+.logo-link {
+  color: #a0aec0;
+  font-family: "Satisfy", cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.logo-link:hover {
+  color: black;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-button {
+  color: #a0aec0;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  color: black;
+}
+
+.menu-icon {
+  fill: currentColor;
+  width: 1.25rem;
+}
+
+.menu-dropdown {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-size: 0.875rem;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 8rem;
+}
+
+.menu-dropdown-item {
+  color: #a0aec0;
+  display: block;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+}
+
+.menu-dropdown-item:hover {
+  color: black;
+}
+
+.disqus {
+  margin-top: 4rem;
+}
+
+.question {
+  line-height: 1;
+  text-align: left;
+}
+
+.question-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.question-menu {
+  font-size: 0.875rem;
+  padding-top: 1.25rem;
+}
+
+.question-menu-item {
+  color: #a0aec0;
+  cursor: pointer;
+  padding-right: 1.25rem;
+}
+
+.question-menu-item:hover {
+  color: black;
+}
+
+.question-menu-item:last-child {
+  padding-right: 0;
+}
+
+.message {
+  background: black;
+  bottom: 0;
+  color: white;
+  font-size: 0.875rem;
+  left: 0;
+  padding: 1.25rem;
+  position: fixed;
+  right: 0;
+  text-align: center;
+}
+
+.block {
+  display: block;
 }
 
 @media (min-width: 768px) {

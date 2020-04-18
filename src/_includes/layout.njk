@@ -6,7 +6,7 @@ isHome: true
 <html lang="en">
   {%- set computedTitle = 'Question #' + renderData.id | string if renderData and renderData.tags and 'question' in renderData.tags | string else title -%}
   {%- set computedDescription = renderData.title if renderData and renderData.tags and 'question' in renderData.tags | string else description -%}
-  
+
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20980483-3"></script>
@@ -56,42 +56,42 @@ isHome: true
     <script src="{{ website.assetsPath }}/js/site.min.js" defer></script>
   </head>
   <body>
-  <header>
-    <h1 style="font-family: 'Satisfy', cursive;">
-      <a class="text-2xl text-black font-normal text-gray-500 hover:text-black" href="/">
-            questhink
-          </a>
-    </h1>
-    <div class="relative js-dropdown">
-      <div class="cursor-pointer text-gray-500 hover:text-black">
-        <?xml version="1.0" encoding="iso-8859-1"?>
-        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg class="fill-current w-5" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve">
-          <g>
+    <header>
+      <h1 class="logo">
+        <a class="logo-link" href="/">
+          questhink
+        </a>
+      </h1>
+      <div class="menu js-dropdown">
+        <div class="menu-button">
+          <?xml version="1.0" encoding="iso-8859-1"?>
+          <svg class="menu-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	          viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve">
             <g>
-              <circle cx="42.667" cy="213.333" r="42.667"/>
+              <g>
+                <circle cx="42.667" cy="213.333" r="42.667"/>
+              </g>
             </g>
-          </g>
-          <g>
             <g>
-              <circle cx="213.333" cy="213.333" r="42.667"/>
+              <g>
+                <circle cx="213.333" cy="213.333" r="42.667"/>
+              </g>
             </g>
-          </g>
-          <g>
             <g>
-              <circle cx="384" cy="213.333" r="42.667"/>
+              <g>
+                <circle cx="384" cy="213.333" r="42.667"/>
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
+        <div class="menu-dropdown js-menu">
+          <a class="menu-dropdown-item" href="/about">About</a>
+          <a class="menu-dropdown-item" href="/contact">Contact</a>
+        </div>
       </div>
-      <div class="absolute right-0 text-sm w-32 shadow-lg rounded-lg bg-white js-menu overflow-hidden">
-            <a class="text-gray-500 hover:text-black block px-4 py-2 pb-1" href="/about">About</a>
-        <a class="text-gray-500 hover:text-black block px-4 py-2 pt-1" href="/contact">Contact</a>
-    </div>
-  </header>
-  <main>
-    {{ content | safe }}
-  </main>
-</body>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+  </body>
 </html>
