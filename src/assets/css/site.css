@@ -617,7 +617,7 @@ body {
 
 @media (min-width: 600px) {
   body {
-    max-width: 48rem;
+    max-width: 32rem;
     padding: 8rem 0;
   }
 
