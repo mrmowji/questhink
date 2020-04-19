@@ -51,7 +51,7 @@ isHome: true
     <script>
       let numberOfQuestions = {{ questions.length }};
       let currentQuestionNumber = {{ (renderData and renderData.id) or 0 }};
-      let websiteUrl = "{{ website.url }}"
+      let websiteUrl = "{{ website.url }}";
     </script>
     <script src="{{ website.assetsPath }}/js/site.min.js" defer></script>
   </head>
