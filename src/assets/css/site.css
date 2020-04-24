@@ -448,11 +448,11 @@ embed {
 /* add extracted components here */
 
 a {
-  color: #4299e1;
+  color: #a0aec0;
 }
 
 a:hover {
-  color: #3182ce;
+  color: black;
 }
 
 code {
@@ -483,6 +483,19 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border-color: #90cdf4;
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+ol li {
+  counter-increment: item;
+  margin-bottom: 0.5rem;
+}
+ol li:before {
+  content: counter(item);
+  margin-right: 0.25rem;
 }
 
 p {
@@ -597,6 +610,10 @@ body {
 
 .question-menu-item:last-child {
   padding-right: 0;
+}
+
+.question a {
+  font-size: 3.5rem;
 }
 
 .message {
