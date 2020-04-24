@@ -4,8 +4,9 @@ isHome: true
 ---
 <!DOCTYPE html>
 <html lang="en">
-  {%- set computedTitle = 'Question #' + renderData.id | string if renderData and renderData.tags and 'question' in renderData.tags | string else title -%}
+  {%- set computedTitle = 'Question #' + renderData.id | string if renderData and renderData.tags and 'question' in renderData.tags | string else ('Page ' + (renderData.page | string) if renderData and renderData.page else title) -%}
   {%- set computedDescription = renderData.title if renderData and renderData.tags and 'question' in renderData.tags | string else description -%}
+  {%- set isIndexableBySearchEngines = false if (renderData and renderData.page) else true -%}
 
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,6 +22,9 @@ isHome: true
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if not isIndexableBySearchEngines %}
+    <meta name="robots" content="noindex, follow">
+    {% endif %}
     <title>{{ computedTitle }}</title>
     <meta name="description" content="{{ computedDescription }}"/>
     <meta property="og:title" content="{{ computedTitle }}">

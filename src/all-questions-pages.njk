@@ -1,25 +1,27 @@
 ---
 layout: layout.njk
-title: All questions
+noIndex: true
 pagination:
     data: questions
     size: 100
     alias: questions
 permalink: "all/page/{{ pagination.pageNumber + 1 }}/"
+renderData:
+  page: "{{ pagination.pageNumber + 1 }}"
 tags: question
 ---
 
-<ol>
 {% set counter = (pagination.pageNumber * 100) + 1 %}
+<ol start="{{ counter }}">
 {% for question in questions %}
-  <li><a href="/{{ counter }}">{{ question.title }}</a></li>
+  <li><a href="/{{ counter }}/">{{ question.title }}</a></li>
   {% set counter = counter + 1 %}
 {% endfor %}
 </ol>
 
-{% if pagination.previousPageLink %}
-  <a href="{{ pagination.previousPageLink }}">Previous</a>
+{% if pagination.previousPageHref %}
+  <a href="{{ pagination.previousPageHref }}">Previous</a>
 {% endif %}
-{% if pagination.nextPageLink %}
-  <a href="{{ pagination.nextPageLink }}">Next</a>
+{% if pagination.nextPageHref %}
+  <a href="{{ pagination.nextPageHref }}">Next</a>
 {% endif %}

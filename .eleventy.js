@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
     //return value.toLocaleDateString('fa-IR');
   });
 
+  eleventyConfig.addFilter("number", function (value) {
+    return +value;
+  });
+
   return {
     dir: {
       input: "src",
