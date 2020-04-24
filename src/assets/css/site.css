@@ -491,11 +491,11 @@ ol {
 }
 ol li {
   counter-increment: item;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 ol li:before {
   content: counter(item);
-  margin-right: 0.25rem;
+  margin-right: 1.5rem;
 }
 
 p {
@@ -612,8 +612,8 @@ body {
   padding-right: 0;
 }
 
-.question a {
-  font-size: 3.5rem;
+.questions a {
+  font-size: 1.5rem;
 }
 
 .message {
