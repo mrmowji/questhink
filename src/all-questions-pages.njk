@@ -3,7 +3,7 @@ layout: layout.njk
 noIndex: true
 pagination:
     data: questions
-    size: 100
+    size: 50
     alias: questions
 permalink: "all/page/{{ pagination.pageNumber + 1 }}/"
 renderData:
@@ -11,7 +11,7 @@ renderData:
 tags: question
 ---
 
-{% set counter = (pagination.pageNumber * 100) + 1 %}
+{% set counter = (pagination.pageNumber * 50) + 1 %}
 <ol start="{{ counter }}" class="questions">
 {% for question in questions %}
   <li><a href="/{{ counter }}/">{{ question.title }}</a></li>
