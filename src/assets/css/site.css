@@ -466,6 +466,7 @@ code {
 }
 
 h1 {
+  font-family: "Inter", sans-serif;
   font-size: 1.875rem;
   font-weight: 900;
   margin-bottom: 0.5rem;
@@ -589,8 +590,9 @@ body {
 }
 
 .question-title {
+  font-family: "Inter", sans-serif;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .question-menu {
