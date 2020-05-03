@@ -601,6 +601,7 @@ body {
   color: white;
   font-size: 0.875rem;
   left: 0;
+  line-height: 1;
   padding: 1.25rem;
   position: fixed;
   right: 0;
