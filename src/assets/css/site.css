@@ -527,6 +527,7 @@ summary {
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: -0.5px;
+  padding-bottom: 8rem;
 }
 
 .logo-link {
