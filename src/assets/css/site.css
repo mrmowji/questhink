@@ -607,6 +607,10 @@ body {
   text-align: center;
 }
 
+a.question-menu-item {
+  color: white;
+}
+
 .question-menu-item {
   cursor: pointer;
   padding-right: 1.25rem;
