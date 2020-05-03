@@ -595,19 +595,25 @@ body {
   font-weight: 900;
 }
 
-.question-menu {
+.question-menu, .message {
+  background: black;
+  bottom: 0;
+  color: white;
   font-size: 0.875rem;
-  padding-top: 1.25rem;
+  left: 0;
+  padding: 1.25rem;
+  position: fixed;
+  right: 0;
+  text-align: center;
 }
 
 .question-menu-item {
-  color: #a0aec0;
   cursor: pointer;
   padding-right: 1.25rem;
 }
 
 .question-menu-item:hover {
-  color: black;
+  color: #a0aec0;
 }
 
 .question-menu-item:last-child {
@@ -618,18 +624,6 @@ body {
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 1;
-}
-
-.message {
-  background: black;
-  bottom: 0;
-  color: white;
-  font-size: 0.875rem;
-  left: 0;
-  padding: 1.25rem;
-  position: fixed;
-  right: 0;
-  text-align: center;
 }
 
 .block {
