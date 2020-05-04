@@ -448,11 +448,16 @@ embed {
 /* add extracted components here */
 
 a {
-  color: #f3f3f3;
+  color: #bbb;
 }
 
 a:hover {
   color: black;
+}
+
+article a {
+  border-bottom: 1px solid currentColor;
+  color: #888;
 }
 
 code {
