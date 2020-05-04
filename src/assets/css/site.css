@@ -448,7 +448,7 @@ embed {
 /* add extracted components here */
 
 a {
-  color: #a0aec0;
+  color: #f3f3f3;
 }
 
 a:hover {
@@ -568,7 +568,7 @@ main {
 .menu-item {
   color: #a0aec0;
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
 .menu-item:last-child {
@@ -636,10 +636,6 @@ a.question-menu-item {
 }
 
 @media (min-width: 600px) {
-  body {
-    padding: 8rem 0;
-  }
-
   header {
     margin-bottom: 10rem;
   }
