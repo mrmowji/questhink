@@ -542,7 +542,6 @@ main {
 }
 
 .logo-link {
-  color: #a0aec0;
   font-family: "Satisfy", cursive;
   font-size: 1.5rem;
   font-weight: 400;
@@ -571,7 +570,6 @@ main {
 }
 
 .menu-item {
-  color: #a0aec0;
   display: inline-block;
   padding: 0.5rem;
 }
@@ -623,7 +621,7 @@ a.question-menu-item {
 }
 
 .question-menu-item:hover {
-  color: #a0aec0;
+  color: #bbb;
 }
 
 .question-menu-item:last-child {
