@@ -802,24 +802,15 @@ Who do you wish you could hug more often?
 What's something good that often gets wasted?
 What's one thing you always avoid?
 What's one thing you learned that blew your mind?
-What do you do to find calm in a chaotic world?
-How has your sense of right and wrong evolved?
-What's one thing that you know is meant to be?
-What's one thing you have never been good at?
 What's something that never ends well?
 What does living a good life mean to you?
-What would you like to see less of on TV?
 What word best describes your work?
 Where do you see yourself at this time next year?
 What is one word that best describes your home?
-Who do you love being alone with?
 What is something you have always wished for?
 What is priceless to you?
-What do you hope to forget about someday?
 What is something you wish for everyone you love?
-What's one bad habit we are all better off without?
 What should a healthy relationship provide for the people in it?
-What do you wish you could change about your family?
 What always helps lift you up when you're feeling down?
 If you could spend one whole year doing anything you wanted, what would you do?
 Where do you go to find peace?
@@ -830,7 +821,6 @@ How would you describe yourself in 5 words?
 If you lost everything today, whose arms would you want to run into?
 What's something you always look forward to?
 What's something positive you try to keep in mind when negativity surrounds you?
-What will you never allow someone else to do to you?
 What would you do differently if you got the chance to relive the past 5 years of your life?
 If you could make a 10 second speech to the entire world, what would you say?
 In one word, what's standing between you and your biggest goal?
