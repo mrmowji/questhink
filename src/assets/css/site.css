@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
+ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -642,4 +642,66 @@ a.question-menu-item {
   header {
     margin-bottom: 10rem;
   }
+}
+
+html {
+  --color-background: #f3f3f3;
+  --color-link: #bbb;
+  --color-article-link: #888;
+  --color-link-hover: black;
+  --color-text: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --color-background: #131313;
+    --color-link: #bbb;
+    --color-article-link: #bbb;
+    --color-link-hover: white;
+    --color-text: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --color-background: #f3f3f3;
+    --color-link: #bbb;
+    --color-article-link: #888;
+    --color-link-hover: black;
+    --color-text: black;
+  }
+}
+
+html.light {
+  --color-background: #f3f3f3;
+  --color-link: #bbb;
+  --color-article-link: #888;
+  --color-link-hover: black;
+  --color-text: black;
+}
+
+html.dark {
+  --color-background: #131313;
+  --color-link: #bbb;
+  --color-article-link: #bbb;
+  --color-link-hover: white;
+  --color-text: white;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover, .menu-item:hover, .logo-link:hover {
+  color: var(--color-link-hover);
+}
+
+article a {
+  border-bottom: 1px solid currentColor;
+  color: var(--color-article-link);
 }
