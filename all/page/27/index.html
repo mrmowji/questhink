@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <script>
+    const DARK_THEME = 'dark';
+    const LIGHT_THEME = 'light';
+    const THEME = "theme";
+
+    function applyTheme() {
+      // Do not use body here as it wouldn't be available yet.
+      let html = document.documentElement;
+      let currentTheme = localStorage.getItem(THEME);
+
+      // Handle macOS dark theme preference.
+      // When the user hasn't set a preference in the site and the preferred
+      // scheme is dark, default to dark.
+      let darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      if (!currentTheme && darkModeQuery.matches) {
+        localStorage.setItem(THEME, DARK_THEME);
+        currentTheme = DARK_THEME;
+      }
+
+      if (currentTheme === DARK_THEME) {
+        html.classList.add(DARK_THEME);
+        html.classList.remove(LIGHT_THEME);
+      } else {
+        html.classList.add(LIGHT_THEME);
+        html.classList.remove(DARK_THEME);
+      }
+
+      const toggleThemeButton = document.getElementById('toggle-theme-button');
+      toggleThemeButton.textContent = (currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME);
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const toggleThemeButton = document.getElementById('toggle-theme-button');
+
+      toggleThemeButton.onclick = function() {
+        let currentTheme = localStorage.getItem(THEME);
+        let newTheme = (currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME);
+        localStorage.setItem(THEME, newTheme);
+        console.log(THEME, newTheme);
+        applyTheme();
+      }
+
+      applyTheme();
+    });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20980483-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-20980483-3');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Questions, Page 27</title>
+    <meta name="description" content=""/>
+    <meta property="og:title" content="All Questions, Page 27">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@questhinkcom"/>
+    <meta name="twitter:title" content="All Questions, Page 27"/>
+    <meta name="twitter:description" content=""/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/layout/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/layout/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/layout/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/layout/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/layout/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/layout/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/layout/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/layout/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/layout/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/layout/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/layout/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/layout/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/layout/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/images/layout/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400|Inter:900|Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/site.min.css"/>
+    <script>
+      let numberOfQuestions = 48;
+      let currentQuestionNumber = 0;
+      let websiteUrl = "https://questhink.com";
+    </script>
+    <script src="/assets/js/site.min.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <a class="logo-link" href="/">
+          questhink
+        </a>
+      </h1>
+      <div class="menu">
+        <a class="menu-item" href="/about">About</a>
+        <a class="menu-item" href="/contact">Contact</a>
+        <a class="menu-item" style="text-transform: capitalize" id="toggle-theme-button" data-themes="dark,light">Dark</a>
+      </div>
+    </header>
+    <main>
+      
+
+<ol start="1301" class="questions">
+
+  <li><a href="/1301/">In one word, what&#39;s standing between you and your biggest goal?</a></li>
+  
+
+  <li><a href="/1302/">If you woke up tomorrow with no fear, what would you do first?</a></li>
+  
+
+  <li><a href="/1303/">When did you last laugh so much, it hurt?</a></li>
+  
+
+  <li><a href="/1304/">What song reminds you of good times from your teenage years?</a></li>
+  
+
+  <li><a href="/1305/">What will you never know for sure?</a></li>
+  
+
+  <li><a href="/1306/">What is the single worst quality a person can have?</a></li>
+  
+
+  <li><a href="/1307/">Why is there something rather than nothing?</a></li>
+  
+
+  <li><a href="/1308/">Is our universe real?</a></li>
+  
+
+  <li><a href="/1309/">Do we have free will?</a></li>
+  
+
+  <li><a href="/1310/">Does God exist?</a></li>
+  
+
+  <li><a href="/1311/">Is there life after death?</a></li>
+  
+
+  <li><a href="/1312/">Can you really experience anything objectively?</a></li>
+  
+
+  <li><a href="/1313/">What is the best moral system?</a></li>
+  
+
+  <li><a href="/1314/">Does a belief in free will make you more or less happy?</a></li>
+  
+
+  <li><a href="/1315/">If you do a good deed in order to feel good about it, is it kindness or business? Does it matter either way?</a></li>
+  
+
+  <li><a href="/1316/">Is suffering an important part of being human?</a></li>
+  
+
+  <li><a href="/1317/">Given the choice of anyone in the world, whom would you want as a dinner guest?</a></li>
+  
+
+  <li><a href="/1318/">Would you like to be famous? In what way?</a></li>
+  
+
+  <li><a href="/1319/">Before making a telephone call, do you ever rehearse what you are going to say? Why?</a></li>
+  
+
+  <li><a href="/1320/">What would constitute a “perfect” day for you?</a></li>
+  
+
+  <li><a href="/1321/">When did you last sing to yourself? To someone else?</a></li>
+  
+
+  <li><a href="/1322/">If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?</a></li>
+  
+
+  <li><a href="/1323/">Do you have a secret hunch about how you will die?</a></li>
+  
+
+  <li><a href="/1324/">Which three things do you and your partner appear to have in common?</a></li>
+  
+
+  <li><a href="/1325/">For what in your life do you feel most grateful?</a></li>
+  
+
+  <li><a href="/1326/">If you could change anything about the way you were raised, what would it be?</a></li>
+  
+
+  <li><a href="/1327/">How would you tell your partner your life story in as much detail as possible in four minutes?</a></li>
+  
+
+  <li><a href="/1328/">If you could wake up tomorrow having gained any one quality or ability, what would it be?</a></li>
+  
+
+  <li><a href="/1329/">If a crystal ball could tell you the truth about yourself, your life, the future, or anything else, what would you want to know?</a></li>
+  
+
+  <li><a href="/1330/">Is there something that you’ve dreamed of doing for a long time? Why haven’t you done it?</a></li>
+  
+
+  <li><a href="/1331/">What is the greatest accomplishment of your life?</a></li>
+  
+
+  <li><a href="/1332/">What do you value most in a friendship?</a></li>
+  
+
+  <li><a href="/1333/">What is your most treasured memory?</a></li>
+  
+
+  <li><a href="/1334/">What is your most terrible memory?</a></li>
+  
+
+  <li><a href="/1335/">If you knew that in one year you would die suddenly, would you change anything about the way you are now living? Why?</a></li>
+  
+
+  <li><a href="/1336/">What does friendship mean to you?</a></li>
+  
+
+  <li><a href="/1337/">What roles do love and affection play in your life?</a></li>
+  
+
+  <li><a href="/1338/">What are five positive characteristics of your partner?</a></li>
+  
+
+  <li><a href="/1339/">How close and warm is your family? Do you feel your childhood was happier than most other people’s?</a></li>
+  
+
+  <li><a href="/1340/">How do you feel about your relationship with your mother?</a></li>
+  
+
+  <li><a href="/1341/">What would be important for your partner to know about you?</a></li>
+  
+
+  <li><a href="/1342/">What do you like about your partner?</a></li>
+  
+
+  <li><a href="/1343/">What&#39;s an embarrassing moment in your life you would share with your partner?</a></li>
+  
+
+  <li><a href="/1344/">When did you last cry in front of another person? By yourself?</a></li>
+  
+
+  <li><a href="/1345/">What, if anything, is too serious to be joked about?</a></li>
+  
+
+  <li><a href="/1346/">If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone? Why haven’t you told them yet?</a></li>
+  
+
+  <li><a href="/1347/">Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?</a></li>
+  
+
+  <li><a href="/1348/">Of all the people in your family, whose death would you find most disturbing? Why?</a></li>
+  
+
+</ol>
+
+
+  <a href="/all/page/26/">Previous</a>
+
+
+    </main>
+  </body>
+</html>
