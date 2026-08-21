@@ -1,9 +1,15 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+document.addEventListener("DOMContentLoaded", function () {
+  /***** another question start *****/
+  let anotherQuestionButton = document.getElementById("another-question-button");
+  if (anotherQuestionButton) {
+    let randomNumber = Math.floor(Math.random() * numberOfQuestions) + 1;
+    while (randomNumber === currentQuestionNumber && numberOfQuestions > 1) {
+      randomNumber = Math.floor(Math.random() * numberOfQuestions) + 1;
+    }
+    anotherQuestionButton.setAttribute("href", websiteUrl + "/" + randomNumber + "/");
+  }
+  /***** another question end *****/
 
-// Write your JavaScript code.
-
-document.addEventListener("DOMContentLoaded", function() {
   /***** dropdown menu start *****/
   for (let el of document.querySelectorAll(".js-dropdown")) {
     el.addEventListener("click", function () {
@@ -12,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   document.addEventListener("click", function (e) {
     for (let el of document.querySelectorAll(".js-dropdown")) {
-      var isClickInside = el.contains(event.target);
+      var isClickInside = el.contains(e.target);
 
       if (!isClickInside) {
         el.querySelector(".js-menu").classList.remove("block");
@@ -20,6 +26,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   /***** dropdown menu end *****/
+
+  /***** copy button start *****/
+  let questionElement = document.getElementById("question");
+  if (questionElement) {
+    let copyButton = document.getElementById("copy-button");
+    if (copyButton) {
+      copyButton.addEventListener("click", function() {
+        copyToClipboard(questionElement.innerText);
+        displayMessage("Copied to clipboard!");
+      });
+    }
+  }
+  /***** copy button end *****/
 });
 
 function copyToClipboard(text) {
@@ -30,7 +49,6 @@ function copyToClipboard(text) {
   input.setSelectionRange(0, 99999); /*For mobile devices*/
   document.execCommand("copy");
   input.remove();
-  displayMessage("Copied to clipboard!");
 }
 
 function displayMessage(message) {
@@ -38,5 +56,7 @@ function displayMessage(message) {
   el.setAttribute("class", "message");
   el.innerText = message;
   document.body.append(el);
-  setTimeout(function(){ el.remove() }, (message.length / 20) * 4000);
+  setTimeout(function () {
+    el.remove();
+  }, (message.length / 20) * 4000);
 }
