@@ -6,8 +6,9 @@ pagination:
     size: 50
     alias: questions
 permalink: "all/page/{{ pagination.pageNumber + 1 }}/"
-renderData:
-  page: "{{ pagination.pageNumber + 1 }}"
+eleventyComputed:
+  renderData:
+    page: "{{ pagination.pageNumber + 1 }}"
 tags: question
 ---
 

@@ -5,10 +5,11 @@ pagination:
     size: 1
     alias: question
 permalink: "{{ pagination.pageNumber + 1 }}/"
-renderData:
-  title: "{{ question.title }}"
-  id: "{{ pagination.pageNumber + 1 }}"
-  tags: question
+eleventyComputed:
+  renderData:
+    title: "{{ question.title }}"
+    id: "{{ (pagination.pageNumber + 1) | number }}"
+    tags: question
 tags: question
 ---
 
